@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Yuhome Growth Spike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" />
+    <link rel="stylesheet" href="/src/yuhome/style.css" />
+  </head>
+  <body>
+    <canvas id="scene" aria-label="3D view of a Yuhome"></canvas>
+
+    <header class="title">
+      <h1>Yuhome</h1>
+      <span id="stage-label">Village</span>
+    </header>
+
+    <section class="hud" aria-live="polite">
+      <div class="fps"><span id="fps">--</span><small>fps</small></div>
+      <dl>
+        <dt>Frame</dt><dd id="ms">--</dd>
+        <dt>Draws</dt><dd id="draws">--</dd>
+        <dt>Triangles</dt><dd id="tris">--</dd>
+        <dt>Objects</dt><dd id="objects">--</dd>
+      </dl>
+    </section>
+
+    <aside class="panel" id="panel">
+      <button class="panel-toggle" id="panel-toggle" aria-expanded="true" aria-controls="panel-body">Controls</button>
+      <div class="panel-body" id="panel-body">
+        <fieldset>
+          <legend>Yuhome size</legend>
+          <div class="chips" id="stage-chips"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Yusians</legend>
+          <div class="chips" id="yusian-chips"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Quality</legend>
+          <div class="chips" id="quality-chips"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Camera</legend>
+          <div class="chips" id="view-chips"></div>
+        </fieldset>
+        <div class="bench">
+          <button id="bench-btn" class="primary">Run benchmark</button>
+          <p class="hint" id="bench-status">Runs every size for 5 seconds at the current quality, about 30 seconds in all.</p>
+          <div id="bench-results" hidden>
+            <table>
+              <thead><tr><th>Size</th><th>Avg fps</th><th>Slowest 1%</th></tr></thead>
+              <tbody id="bench-rows"></tbody>
+            </table>
+            <button id="copy-btn">Copy results</button>
+            <textarea id="copy-text" readonly hidden aria-label="Benchmark results"></textarea>
+          </div>
+        </div>
+        <p class="hint device" id="device"></p>
+      </div>
+    </aside>
+
+    <script type="module" src="/src/yuhome/main.js"></script>
+  </body>
+</html>

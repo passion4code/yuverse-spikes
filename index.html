@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Yuverse Spikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Inter:wght@400;500&display=swap" />
+    <style>
+      :root { --bg: #1d2333; --panel: #262d40; --fg: #eef1f8; --muted: #a9b1c6; --accent: #ffc76b; color-scheme: dark; }
+      body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg); font: 16px/1.55 Inter, system-ui, sans-serif;
+        padding-block: 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+      main { max-width: 640px; margin: 0 auto; display: grid; gap: 24px; }
+      h1 { font: 600 2.2rem/1.1 Fredoka, system-ui, sans-serif; margin: 0; text-wrap: balance; }
+      p { margin: 0; color: var(--muted); }
+      a.spike { display: grid; gap: 4px; padding: 20px; border-radius: 14px; background: var(--panel); color: var(--fg); text-decoration: none; border: 1px solid #ffffff14; }
+      a.spike:hover, a.spike:focus-visible { border-color: var(--accent); outline: none; }
+      a.spike strong { font: 600 1.25rem Fredoka, system-ui, sans-serif; color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Yuverse rendering spikes</h1>
+      <p>Throwaway prototypes that test how the Yuverse looks and how fast it runs, on real phones, tablets and PCs. Each one has a benchmark you can run and copy the results from.</p>
+      <a class="spike" href="./yuhome/">
+        <strong>Yuhome growth</strong>
+        <span>Three.js, WebGL 2. A stylized Yuhome that grows from one cottage to a 20,000-building metropolis, with walking Yusians.</span>
+      </a>
+    </main>
+  </body>
+</html>
